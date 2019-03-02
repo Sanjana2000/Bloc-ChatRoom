@@ -21,6 +21,6 @@
   }
 
   angular
-    .module('blocChat')
+    .module('ChatRoom')
     .factory('Room', ['$firebaseArray', Room]);
 })();
