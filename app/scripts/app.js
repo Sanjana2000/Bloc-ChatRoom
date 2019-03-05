@@ -13,8 +13,8 @@
                 templateUrl: '/templates/home.html'
             });
     }
-    
+
     angular
-        .module('ChatRoom', ['ui.router', 'firebase'])
+        .module('ChatRoom', ['ui.router', 'firebase', 'ui.bootstrap'])
          .config(config);
 })();
