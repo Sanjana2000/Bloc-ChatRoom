@@ -1,46 +1,71 @@
-* {
-	font-family: 'Quicksand', sans-serif;
+/*General styles*/
+
+html {
+    font-size: 100%;
 }
 
-/* Side Bar Content */
-.side-bar {
-	background-color: #78909C;
-	color: #FFF;
-	min-height: 960px;
-	float: left;
-	padding: 0px 20px;
+/*Sidebar*/
+
+.sidebar h1 {
+  font-size: 34px;
+  display: inline-block;
+  margin: 25px 0 25px 30px;
 }
 
-.app-name {
-	margin-bottom: 10px;
+.sidebar {
+    position: absolute;
+    float: left;
+    width: 21%;
+    height: 100%;
+    background-color: #CFD499  ;
 }
 
-.btn-new-room {
-	margin-bottom: 10px;
+.new-room-button {
+  float: right;
+  margin: 30px 25px 20px 10px;
+  padding: 2px 5px 2px 5px;
+  display: inline-block;
+  color: #D29236;
+  background-color: #F6F7FB;
+  border-radius: 3px;
 }
 
-.room-list {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
+.room-list li {
+    list-style-type: square;
+    margin: 5px;
+    padding: 3px;
+    color: #26272A;
 }
 
-.room-name {
-	font-weight: bold;
-	font-size: 1.2em;
-	margin-bottom: 10px;
+/*Chatroom Section*/
+
+.chatroom-section {
+  float: right;
+  width: 75%;
+  margin: 5px;
+  padding: 5px 25px;
 }
 
-/* Main Section */
-.main-section {
-	background-color: #CFD8DC;
-	min-height: 960px;
-	margin-top: -10px;
+.message-list {
+  list-style: none;
+  margin-left: 0;
+  padding: 12px;
+  background-color: #FFFFFF;
 }
 
-.main-section-title {
-	text-align: center;
-	color: #78909C;
+.message-list li {
+  padding: 0 20px 0 20px;
+}
+.message-list:nth-child(2n) {
+  background-color: #F6F7FB;
 }
 
-/* Media Queries */
+
+.timestamp {
+  float: right;
+  color: #C7CCD0;
+}
+
+.username {
+  font-weight: bold;
+}

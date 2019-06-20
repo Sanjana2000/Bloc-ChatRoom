@@ -1,15 +1,20 @@
-<form ng-submit="modalInstance.ok()">
-	<div class="modal-header">
-		<h1>Create new room</h1>
-	</div>
-	<div class="modal-body">
-		<h3>Enter a room name</h3>
-		<p>
-			<input type="text" ng-model="modalInstance.name" title="name"/>
-		</p>
-	</div>
-	<div class="modal-footer">
-		<button class="btn btn-default" type="button" ng-click="modalInstance.cancel()">Cancel</button>
-		<button class="btn btn-primary" type="button" ng-click="modalInstance.ok()">Create</button>
-	</div>
-</form>
+<!-- This template (modal.html) is triggered by ModalCtrl when the user clicks the New Room' button on home.html.  -->
+<!-- Once this view is enabled, ModalInstanceCtrl controller takes over to connect this view to the model -->
+<div>
+  <div class="modal-header">
+    <h2 class="modal-title">Create new room</h2>
+  </div>
+  <div class="modal-body">
+    <p>Enter a room name</p>
+    <form name="create-room" ng-submit="modalInstance.ok(modalInstance.room)">
+      <input class="form-control" ng-model="modalInstance.room" title="room" placeholder="name" autofocus />
+      <h3>{{modalInstance.room}}
+    </form>
+  </div>
+  <div class="modal-footer">
+    <!-- When this 'create' button is clicked within this modal, the ___() method is triggered in the ___Ctrl. -->
+    <button class="btn btn-primary" type="button" ng-click="modalInstance.ok(modalInstance.room)">Create room</button>
+    <!-- When this 'cancel' button is clicked within this modal, the cancel() method is triggered in the ModalInstanceCtrl. -->
+    <button class="btn btn-warning" type="button" ng-click="modalInstance.cancel()">Cancel</button>
+  </div>
+</div>
