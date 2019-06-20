@@ -1,3 +1,17 @@
-
- <h1>Welcome to ChatRooms</h1>
- <div ng-repeat="room in home.rooms">{{ room.name }}</div>
+ <div class="container-fluid">
+ 	<div class="row">
+ 		<section class="side-bar col-md-3">
+ 			<h1 class="app-name">Bloc Chat</h1>
+ 			<div ng-controller='ModalCtrl as modal'>
+ 			 	<button type="button" class="btn btn-default btn-block btn-new-room" ng-click="modal.open()">New Room</button>
+ 			</div>
+ 			<ul class="room-list" ng-repeat="room in home.rooms">
+ 				<li class="room-name" ng-click="activeRoom(room)">{{ room.$value }}</li>
+ 			</ul>
+ 		</section>
+ 		<main class="main-section col-md-9">
+ 			<h1 class="main-section-title">{{ currentRoom.$value }}</h1>
+ 			<div ng-repeat="message in messages track by $index">{{ message.content }}</div>
+ 		</main>
+ 	</div>
+ </div>
